@@ -7,11 +7,15 @@ parser = argparse.ArgumentParser(
 )
 
 """
-Allt här kommer bli argument vi skickar in
+Allt här kommer bli argument vi skickar in.
+Mellan parser och args skriver vi våra argument.
+Finns många olika typer, vi fokuserar på:
+    - positional
+    - optional (flags)
+    - optional (mutually exclusive group)
 """
 # parser.add_argument("name", help="Detta är en textsträng som ska skickas in.")  # name blir namnet på variabeln i parsern
-# här kommer ni att lägga alla era argument som behövs
-# alltså first integer/float och second integer/float
+
 
 # Positional arguments läggs i ordning
 parser.add_argument("first", type=float)
@@ -31,7 +35,7 @@ group.add_argument(
 
 args = parser.parse_args()
 
-# Detta går men det finns ett bättre sätt i argparse
+# Detta går men det finns ett bättre sätt i argparse. Se ovan hur vi kan typomvandla i argumentet som läggs till.
 # args.first = float(args.first) # int() eller float() omvandlar bool()
 # args.second = float(args.second)
 
